@@ -22,7 +22,7 @@ rhinit <-function(errors=TRUE, info=FALSE,path=NULL,cleanup=FALSE,bufsize=as.int
     unlink(r)
     unlink(r2)
   })
-  f1 <- "localhost"
+  f1 <- "127.0.0.1"
   r <- tempfile(pattern="sockets");r2 <- tempfile(pattern="signal")
   if(is.null(path))
     cmda <- paste( c(sprintf("%s/hadoop jar",Sys.getenv("HADOOP_BIN")),rhoptions()$jarloc,"org.godhuli.rhipe.PersonalServer",f1,r,r2,as.integer(buglevel)),collapse=" ")
